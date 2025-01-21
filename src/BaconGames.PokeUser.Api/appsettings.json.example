@@ -1,0 +1,19 @@
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "AllowedHosts": "*",
+    "MongoSettings": {
+        "ConnectionString": "mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<baseDeDatos>",
+        "DatabaseName": "nombreBaseDeDatos",
+        "UsersCollectionName": "Users"
+    },
+    "Jwt": {
+        "Key": "tu-clave-secreta-de-almenos-doscientos-cincuenta-y-seis-bits",
+        "Issuer": "BaconGames",
+        "Audience": "BaconGames_PokeUser"
+    }
+}

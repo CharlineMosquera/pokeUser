@@ -1,0 +1,43 @@
+# Visual Studio
+.vscode/
+.vs/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Otros
+*.swp
+*~
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+*.sublime-workspace
+*.sublime-project
+.idea/
+*.iml
+*.csproj.user

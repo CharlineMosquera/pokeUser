@@ -7,7 +7,7 @@ namespace BaconGames.PokeUser.Persistence.Models
     {
         [BsonId] // Para marcar que esta propiedad es el Id de la colección MongoDB
         [BsonRepresentation(BsonType.ObjectId)] // Para indicar que el tipo de dato es un ObjectId
-        public string Id { get; set; }
+        public ObjectId Id { get; set; }
 
         [BsonElement("name")] // Asigna el nombre del campo en la colección MongoDB
         public string Name { get; set; }
@@ -19,6 +19,6 @@ namespace BaconGames.PokeUser.Persistence.Models
         public string Password { get; set; }
 
         [BsonElement("pokemon")]
-        public List<string> Pokemon { get; set; } // Relación con los Pokémon capturados por el usuario.
+        public List<ObjectId> Pokemon { get; set; } = new List<ObjectId>(); // Relación con los Pokémon capturados por el usuario.
     }
 }

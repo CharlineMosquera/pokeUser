@@ -16,7 +16,7 @@ namespace BaconGames.PokeUser.Domain.Entities
         [MinLength(8)] // Atributo de validación de longitud mínima
         public string Password { get; set; }
 
-        public List<string> Pokemon { get; set; } // Almacena una lista de IDs de Pokémon.
+        public List<string> Pokemon { get; set; } = new List<string>(); // Almacena una lista de IDs de Pokémon.
 
     }
 }

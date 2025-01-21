@@ -1,5 +1,6 @@
 ﻿using BaconGames.PokeUser.Domain.Entities;
 using BaconGames.PokeUser.Persistence.Models;
+using MongoDB.Bson;
 
 namespace BaconGames.PokeUser.Persistence.Mappers
 {
@@ -9,7 +10,7 @@ namespace BaconGames.PokeUser.Persistence.Mappers
         {
             return new PokemonDocument
             {
-                Id = string.IsNullOrEmpty(pokemon.Id) ? null : pokemon.Id,
+                Id = string.IsNullOrEmpty(pokemon.Id) ? ObjectId.Empty : ObjectId.Parse(pokemon.Id),
                 Name = pokemon.Name,
                 Data = pokemon.Data
             };
@@ -19,7 +20,7 @@ namespace BaconGames.PokeUser.Persistence.Mappers
         {
             return new Pokemon
             {
-                Id = pokemonDocument.Id,
+                Id = pokemonDocument.Id.ToString(),
                 Name = pokemonDocument.Name,
                 Data = pokemonDocument.Data
             };

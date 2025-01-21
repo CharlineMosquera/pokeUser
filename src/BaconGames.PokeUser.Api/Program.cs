@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using BaconGames.PokeUser.Api.Converters;
 using BaconGames.PokeUser.Application;
 using BaconGames.PokeUser.External.Services;
 using BaconGames.PokeUser.Persistence.Configurations;
@@ -65,8 +66,11 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 builder.Services.AddHttpClient<PokeApiService>();
 
-// Add services to the container.
-builder.Services.AddControllers();
+// Configuración de JSON
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.Converters.Add(new ObjectIdConverter());
+});
 
 var app = builder.Build();
 

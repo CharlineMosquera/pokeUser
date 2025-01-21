@@ -31,7 +31,6 @@ namespace BaconGames.PokeUser.Api.Controllers
             {
                 return Unauthorized(new { message = "Usuario no autenticado" });
             }
-            Console.WriteLine($"Id suario autenticado {userId}");
 
             // Consulta la PokeAPI para obtener los datos del Pokémon
             var pokemonData = await _pokeApiService.GetPokemonDataAsync(request.PokemonName);

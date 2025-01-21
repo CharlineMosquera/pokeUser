@@ -53,3 +53,23 @@ Para ejecutar el proyecto, usa el siguiente comando:
 dotnet run --project src/BaconGames.PokeUser.Api
 ````
 
+### Swagger
+
+Puede consultar la documentación de la API ejecutando la aplicación y navegando a:
+````
+http://localhost:<puerto>/swagger
+````
+### Pruebas con Postman (Herramienta similar)
+Actualmente, la autorización de los endpoints no se configura automáticamente a través de la cookie tokenjwt. Por lo tanto, para probar la funcionalidad completa de la API, sigue estos pasos:
+
+1. Realice un login para obtener el token JWT, el cual se almacena automáticamente en una cookie llamada tokenjwt.
+2. Copie el valor del token desde la cookie tokenjwt.
+3. En Postman, vaya a la pestaña de Autorización y seleccione el tipo Bearer Token.
+4. Pegue el valor del token en el campo correspondiente.
+
+De esta forma, podrá probar los endpoints protegidos con el token de autorización.
+
+***Nota: La automatización de la autorización basada en cookies está en desarrollo y se implementará en futuras versiones.***
+
+
+

@@ -43,7 +43,7 @@ Se utiliza dotnet user-secrets para manejar la configuración sensible de forma 
 Clonar el repositorio
 
 ````
-git clone https://github.com/CharlineMosquera/prueba-tecnica-bacon-games.git
+git clone https://github.com/CharlineMosquera/pokeUser.git
 ````
 **IMPORTANTE**
 ***En el archivo appsettings.json debe configurar la url de conexion a Mongo y una clave secrete de minimo 256 bits para la firma de los tokens jwt, en el archivo appsettings.json.example encontrara un ejemplo***
